@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Okt 2023 pada 20.57
--- Versi server: 10.4.28-MariaDB
--- Versi PHP: 8.2.4
+-- Generation Time: Nov 13, 2023 at 03:15 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tblbooking`
+-- Table structure for table `tblbooking`
 --
 
 CREATE TABLE `tblbooking` (
@@ -63,7 +63,7 @@ CREATE TABLE `tblbooking` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tblbrands`
+-- Table structure for table `tblbrands`
 --
 
 CREATE TABLE `tblbrands` (
@@ -74,7 +74,7 @@ CREATE TABLE `tblbrands` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data untuk tabel `tblbrands`
+-- Dumping data for table `tblbrands`
 --
 
 INSERT INTO `tblbrands` (`id`, `BrandName`, `CreationDate`, `UpdationDate`) VALUES
@@ -89,7 +89,7 @@ INSERT INTO `tblbrands` (`id`, `BrandName`, `CreationDate`, `UpdationDate`) VALU
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tblsubscribers`
+-- Table structure for table `tblsubscribers`
 --
 
 CREATE TABLE `tblsubscribers` (
@@ -101,7 +101,7 @@ CREATE TABLE `tblsubscribers` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbltestimonial`
+-- Table structure for table `tbltestimonial`
 --
 
 CREATE TABLE `tbltestimonial` (
@@ -115,7 +115,7 @@ CREATE TABLE `tbltestimonial` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tblusers`
+-- Table structure for table `tblusers`
 --
 
 CREATE TABLE `tblusers` (
@@ -132,16 +132,16 @@ CREATE TABLE `tblusers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data untuk tabel `tblusers`
+-- Dumping data for table `tblusers`
 --
 
 INSERT INTO `tblusers` (`id`, `FullName`, `EmailId`, `Password`, `ContactNo`, `dob`, `Address`, `City`, `RegDate`, `UpdationDate`) VALUES
-(2, 'test', 'test@email.com', '12345', NULL, '', 'Sleman', 'Yogya', '2023-10-05 11:20:00', NULL);
+(4, 'Elang', 'elang@gmail.com', '4f6845137a0534e4f322ac744d40d8a0', '08123456789', NULL, NULL, NULL, '2023-11-08 13:40:11', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tblvehicles`
+-- Table structure for table `tblvehicles`
 --
 
 CREATE TABLE `tblvehicles` (
@@ -175,7 +175,7 @@ CREATE TABLE `tblvehicles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data untuk tabel `tblvehicles`
+-- Dumping data for table `tblvehicles`
 --
 
 INSERT INTO `tblvehicles` (`id`, `VehiclesTitle`, `VehiclesBrand`, `VehiclesOverview`, `PricePerDay`, `FuelType`, `ModelYear`, `SeatingCapacity`, `Vimage1`, `Vimage2`, `Vimage3`, `Vimage4`, `Vimage5`, `AirConditioner`, `PowerDoorLocks`, `AntiLockBrakingSystem`, `BrakeAssist`, `PowerSteering`, `DriverAirbag`, `PassengerAirbag`, `PowerWindows`, `CDPlayer`, `CentralLocking`, `CrashSensor`, `LeatherSeats`, `RegDate`, `UpdationDate`) VALUES
@@ -187,90 +187,90 @@ INSERT INTO `tblvehicles` (`id`, `VehiclesTitle`, `VehiclesBrand`, `VehiclesOver
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tblbooking`
+-- Indexes for table `tblbooking`
 --
 ALTER TABLE `tblbooking`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tblbrands`
+-- Indexes for table `tblbrands`
 --
 ALTER TABLE `tblbrands`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tblsubscribers`
+-- Indexes for table `tblsubscribers`
 --
 ALTER TABLE `tblsubscribers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tbltestimonial`
+-- Indexes for table `tbltestimonial`
 --
 ALTER TABLE `tbltestimonial`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tblusers`
+-- Indexes for table `tblusers`
 --
 ALTER TABLE `tblusers`
   ADD PRIMARY KEY (`id`),
   ADD KEY `EmailId` (`EmailId`);
 
 --
--- Indeks untuk tabel `tblvehicles`
+-- Indexes for table `tblvehicles`
 --
 ALTER TABLE `tblvehicles`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `tblbooking`
+-- AUTO_INCREMENT for table `tblbooking`
 --
 ALTER TABLE `tblbooking`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `tblbrands`
+-- AUTO_INCREMENT for table `tblbrands`
 --
 ALTER TABLE `tblbrands`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT untuk tabel `tblsubscribers`
+-- AUTO_INCREMENT for table `tblsubscribers`
 --
 ALTER TABLE `tblsubscribers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `tbltestimonial`
+-- AUTO_INCREMENT for table `tbltestimonial`
 --
 ALTER TABLE `tbltestimonial`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `tblusers`
+-- AUTO_INCREMENT for table `tblusers`
 --
 ALTER TABLE `tblusers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `tblvehicles`
+-- AUTO_INCREMENT for table `tblvehicles`
 --
 ALTER TABLE `tblvehicles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
